@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
+
 form {
   display: flex;
   flex-direction: row;
@@ -46,8 +47,29 @@ form {
 }
 
 .wishes {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  justify-content: center;
   width: 90%;
   flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.single-wish {
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-color: rgba(207, 92, 169, 0.452);
+}
+
+.single-wish-text {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 8px;
 }
