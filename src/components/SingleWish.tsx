@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { Wish } from '../model'
 import './styles.css'
 
@@ -7,7 +7,6 @@ interface Props {
   wishes: Wish[]
   setWishes: React.Dispatch<React.SetStateAction<Wish[]>>
 }
-
 
 const SingleWish = ({ wish, wishes, setWishes }: Props) => {
 
@@ -28,8 +27,6 @@ const SingleWish = ({ wish, wishes, setWishes }: Props) => {
       );
       setEdit(false);
   };
-
-  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleDelete = (id: string) => {
     setWishes(wishes.filter(wish => wish.id !== id))

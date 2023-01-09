@@ -21,6 +21,7 @@ const App: React.FC = () => {
   console.log(wish)
   console.log(wishes)
 
+
   return (
     <div className='App'>
       <span className='heading'>Chanana's Bucket List</span>
