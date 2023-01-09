@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Wish } from '../model'
 import './styles.css'
 
@@ -11,6 +11,9 @@ interface Props {
 
 const SingleWish = ({ wish, wishes, setWishes }: Props) => {
 
+  const [edit, setEdit] = useState<boolean>(false);
+  const [editWish, setEditWish] = useState<string>(wish.wish);
+
   const handleDone = (id: string) => {
     setWishes(wishes.map((wish) =>
       wish.id === id ? { ...wish, isDone: !wish.isDone } : wish)
@@ -18,7 +21,9 @@ const SingleWish = ({ wish, wishes, setWishes }: Props) => {
   }
 
   const handleEdit = (id: string) => {
-
+    if (!edit && !wish.isDone) {
+      setEdit(!edit);
+    }
   }
 
   const handleDelete = (id: string) => {
