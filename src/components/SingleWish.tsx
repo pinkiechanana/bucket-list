@@ -39,7 +39,7 @@ const SingleWish = ({ wish, wishes, setWishes }: Props) => {
   return (
     <form className='single-wish' onSubmit={(e) => handleEdit(e, wish.id)}>
       {edit ? (
-        <input value={editWish} onChange={(e) => setEditWish(e.target.value)} className="single-wish-text"></input>
+        <input value={editWish} onChange={(e) => setEditWish(e.target.value)} className="edit-input"></input>
       ) : wish.isDone ? (
         <span className='single-wish-text'><del>{wish.wish}</del></span>
       ) : (

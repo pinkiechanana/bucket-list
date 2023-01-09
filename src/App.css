@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
 .App {
   width: 100vw;
@@ -7,7 +7,7 @@
   flex-direction: column; /* Every Direction will be going from top to bottom */
   align-items: center;
   background-color: #ffa9e4;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Amatic SC', cursive;
 }
 
 .heading {
