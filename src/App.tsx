@@ -8,7 +8,7 @@ import BucketList from './components/BucketList';
 
 const App: React.FC = () => {
   const [wish, setWish] = useState<string>("");
-  const [wishes, setWishes] = useState<Wish[]>([])
+  const [wishes, setWishes] = useState<Wish[]>([])  
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
 
