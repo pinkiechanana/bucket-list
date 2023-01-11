@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Wish } from '../model'
-import './styles.css'
 
 interface Props {
   wish: Wish

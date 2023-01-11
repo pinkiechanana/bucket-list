@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import InputField from './components/InputField';
 import { Wish } from './model';
@@ -8,7 +8,7 @@ import BucketList from './components/BucketList';
 
 const App: React.FC = () => {
   const [wish, setWish] = useState<string>("");
-  const [wishes, setWishes] = useState<Wish[]>([])  
+  const [wishes, setWishes] = useState<Wish[]>([])
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -18,15 +18,12 @@ const App: React.FC = () => {
     }
   }
 
-  console.log(wish)
-  console.log(wishes)
-
 
   return (
     <div className='App'>
       <span className='heading'>Chanana's Bucket List</span>
       <InputField wish={wish} setWish={setWish} handleAdd={handleAdd} />
-      <BucketList wishes={wishes} setWishes={setWishes}/>
+      <BucketList wishes={wishes} setWishes={setWishes} />
     </div>
   )
 }

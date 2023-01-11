@@ -1,7 +1,6 @@
 import React from 'react'
 import { Wish } from '../model'
 import SingleWish from './SingleWish';
-import "./styles.css"
 
 interface Props {
   wishes: Wish[];
